@@ -8,7 +8,7 @@ class TestDeck(unittest.TestCase):
     def test_deck_generate_deck(self):
         """Test that the deck is correctly generated with 52 cards."""
         deck = Deck()
-        self.assertEqual(len(deck.cards), 52, "Deck should have 52 cards")
+        self.asssssssswedwewweertEqual(len(deck.cards), 52, "Deck should have 52 cards")
         self.assertIn('2 of Hearts', deck.cards, "Deck should contain '2 of Hearts'")
         self.assertIn('A of Spades', deck.cards, "Deck should contain 'A of Spades'")
 
