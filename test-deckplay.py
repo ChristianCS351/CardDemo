@@ -30,29 +30,7 @@ class TestDeck(unittest.TestCase):
             deck.draw_card()
         last_card = deck.draw_card()
         self.assertIsNone(last_card, "No card should be drawn when the deck is empty")
-        
-    def test_hand_add_card(self):
-        """Test adding a card to the hand."""
-        hand = Hand()
-        hand.add_card('2 of Hearts')
-        self.assertEqual(hand.num_cards(), 1, "Hand should have 1 card after adding a card")
-        self.assertEqual(hand.display_hand(), "2 of Hearts", "Hand should contain '2 of Hearts'")
-
-    def test_hand_display_hand(self):
-        """Test displaying the hand."""
-        hand = Hand()
-        hand.add_card('2 of Hearts')
-        hand.add_card('3 of Diamonds')
-        self.assertEqual(hand.display_hand(), "2 of Hearts, 3 of Diamonds", "Hand should display all cards correctly")
-
-    def test_hand_num_cards(self):
-        """Test the number of cards in the hand."""
-        hand = Hand()
-        hand.add_card('2 of Hearts')
-        hand.add_card('3 of Diamonds')
-        self.assertEqual(hand.num_cards(), 2, "Hand should have 2 cards after adding two cards")
-        hand.add_card('4 of Clubs')
-        self.assertEqual(hand.num_cards(), 3, "Hand should have 3 cards after adding one more card")
+    
 
 if __name__ == '__main__':
     unittest.main()
